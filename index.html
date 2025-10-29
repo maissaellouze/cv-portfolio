@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CV ">
+    <title>CV  - Maissa ELLOUZE</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navigation no-print">
+        <div class="nav-brand">ME</div>
+        <ul class="nav-menu">
+            <li><a href="#home" class="nav-link active" data-section="home"><i class="fas fa-home"></i><span>Accueil</span></a></li>
+            <li><a href="#about" class="nav-link" data-section="about"><i class="fas fa-user"></i><span>Profil</span></a></li>
+            <li><a href="#skills" class="nav-link" data-section="skills"><i class="fas fa-code"></i><span>Compétences</span></a></li>
+            <li><a href="#experience" class="nav-link" data-section="experience"><i class="fas fa-briefcase"></i><span>Expérience</span></a></li>
+            <li><a href="#projects" class="nav-link" data-section="projects"><i class="fas fa-laptop-code"></i><span>Projets</span></a></li>
+            <li><a href="#education" class="nav-link" data-section="education"><i class="fas fa-graduation-cap"></i><span>Formation</span></a></li>
+            <li><a href="#contact" class="nav-link" data-section="contact"><i class="fas fa-envelope"></i><span>Contact</span></a></li>
+        </ul>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <div class="scroll-indicator no-print">
+        <div class="scroll-progress"></div>
+    </div>
+
+    <section id="home" class="section hero-section">
+        <div class="hero-content">
+            <div class="hero-image-wrapper">
+                <div class="hero-image">
+                    <img src="maissa.jpeg" alt="Photo de profil">
+                </div>
+            </div>
+            <h1 class="hero-title">Maissa ELLOUZE</h1>
+            <p class="hero-subtitle">Étudiante en Génie Logiciel</p>
+            <p class="hero-tagline">Passionnée par le développement Full Stack et les nouvelles technologies</p>
+            <div class="hero-socials">
+                <a href="mailto:maissaellouze02@gmail.com" class="social-link" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://linkedin.com/in/maissa-ellouze" target="_blank" class="social-link" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/maissaellouze" target="_blank" class="social-link" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+            <a href="#about" class="hero-cta">Découvrir mon profil</a>
+        </div>
+        <div class="hero-scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <section id="about" class="section about-section">
+        <div class="section-container">
+            <h2 class="section-title"><i class="fas fa-user"></i> À Propos</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-intro">Étudiante en deuxième année de Génie Logiciel, passionnée par le développement d'applications innovantes et performantes.</p>
+                    <p>Diplômée d'une Licence en Technologie de l'Information de l'ISET Sfax, je possède une solide expérience dans le développement Full Stack avec des technologies modernes comme Spring Boot, Angular, React, Flutter et Django.</p>
+                    <p>Motivée, organisée et dotée d'excellentes compétences en communication et travail d'équipe. Je cherche constamment à relever de nouveaux défis techniques et à contribuer à des projets stimulants.</p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="4">0</div>
+                        <div class="stat-label">Stages complétés</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="8">0</div>
+                        <div class="stat-label">Projets réalisés</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="12">0</div>
+                        <div class="stat-label">Technologies maîtrisées</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section skills-section">
+        <div class="section-container">
+            <h2 class="section-title"><i class="fas fa-code"></i> Compétences</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3><i class="fas fa-laptop-code"></i> Langages de Programmation</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">JavaScript / TypeScript</span>
+                                <span class="skill-percent">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-level" data-level="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Java</span>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-level" data-level="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Python</span>
+                                <span class="skill-percent">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-level" data-level="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">PHP</span>
+                                <span class="skill-percent">75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-level" data-level="75"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Dart</span>
+                                <span class="skill-percent">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-level" data-level="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">C</span>
+                                <span class="skill-percent">70%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-level" data-level="70"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <h3><i class="fas fa-layer-group"></i> Frameworks Backend & Frontend</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Spring Boot</span>
+                        <span class="tag">Django</span>
+                        <span class="tag">Node.js</span>
+                        <span class="tag">Angular</span>
+                        <span class="tag">React</span>
+                        <span class="tag">Flutter</span>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <h3><i class="fas fa-database"></i> Bases de Données</h3>
+                    <div class="skill-tags">
+                        <span class="tag">PostgreSQL</span>
+                        <span class="tag">MySQL</span>
+                        <span class="tag">MongoDB</span>
+                        <span class="tag">SQL Server</span>
+                        <span class="tag">Oracle</span>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <h3><i class="fas fa-tools"></i> Outils & Technologies</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Git</span>
+                        <span class="tag">Docker</span>
+                        <span class="tag">JasperReports</span>
+                        <span class="tag">Mockito</span>
+                        <span class="tag">Windows</span>
+                        <span class="tag">Linux</span>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <h3><i class="fas fa-language"></i> Langues</h3>
+                    <ul class="languages-list">
+                        <li>
+                            <span>Arabe</span>
+                            <span class="level">Natif</span>
+                        </li>
+                        <li>
+                            <span>Français</span>
+                            <span class="level">Courant</span>
+                        </li>
+                        <li>
+                            <span>Anglais</span>
+                            <span class="level">Courant</span>
+                        </li>
+                        <li>
+                            <span>Espagnol</span>
+                            <span class="level">Débutant</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <h3><i class="fas fa-user-check"></i> Compétences Comportementales</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Communication</span>
+                        <span class="tag">Travail d'équipe</span>
+                        <span class="tag">Gestion du temps</span>
+                        <span class="tag">Résolution de problèmes</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="section experience-section">
+        <div class="section-container">
+            <h2 class="section-title"><i class="fas fa-briefcase"></i> Expérience Professionnelle</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Juillet - Août 2025</div>
+                        <h3>Stage d'initiation</h3>
+                        <h4>Intellitech - Sfax</h4>
+                        <p class="project-subtitle">Système de Suivi des Échantillons de Tests Médicaux à Domicile</p>
+                        <ul>
+                            <li>Conception et développement d'une application de suivi pour tests médicaux à domicile</li>
+                            <li>Gestion des demandes patients avec suivi en temps réel du statut</li>
+                            <li>Interface infirmière pour collecte et mise à jour des statuts</li>
+                            <li>Dashboard administrateur avec statistiques et suivi géolocalisé</li>
+                        </ul>
+                        <div class="tech-stack">
+                            <span>Spring Boot</span>
+                            <span>Angular</span>
+                            <span>PostgreSQL</span>
+                            <span>Docker</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Février - Mai 2024</div>
+                        <h3>Stage de Fin d'Études</h3>
+                        <h4>KMF - Sfax</h4>
+                        <p class="project-subtitle">Intégration Dashboard pour Gestion d'Équipements dans ERP</p>
+                        <ul>
+                            <li>Intégration d'un dashboard de gestion d'équipements dans un ERP existant</li>
+                            <li>Suivi et monitoring efficace des actifs de l'entreprise</li>
+                            <li>Génération de rapports détaillés imprimables avec JasperReports</li>
+                            <li>Analyse des données et visualisation des statistiques</li>
+                        </ul>
+                        <div class="tech-stack">
+                            <span>Spring Boot</span>
+                            <span>Angular</span>
+                            <span>JasperReports</span>
+                            <span>PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Juillet - Septembre 2023</div>
+                        <h3>Stage Optionnel</h3>
+                        <h4>KMF - Sfax</h4>
+                        <p class="project-subtitle">Système de Gestion Bancaire</p>
+                        <ul>
+                            <li>Conception et développement d'un système de gestion bancaire complet</li>
+                            <li>Gestion des comptes, transactions et dossiers clients</li>
+                            <li>Système de reporting et génération de rapports détaillés</li>
+                            <li>Interface intuitive pour opérations bancaires quotidiennes</li>
+                        </ul>
+                        <div class="tech-stack">
+                            <span>Spring Boot</span>
+                            <span>Angular</span>
+                            <span>JasperReports</span>
+                            <span>MySQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Janvier - Février 2023</div>
+                        <h3>Stage de perfectionnement</h3>
+                        <h4>Artibedded - Sfax</h4>
+                        <p class="project-subtitle">Système de Gestion de Jardin d'Enfants</p>
+                        <ul>
+                            <li>Application desktop (Java) pour gestion des dossiers enfants et enseignants</li>
+                            <li>Application web (PHP) pour accès en ligne selon droits d'accès</li>
+                            <li>Gestion des cours et opérations quotidiennes</li>
+                            <li>Interface différenciée pour administrateurs, enseignants et parents</li>
+                        </ul>
+                        <div class="tech-stack">
+                            <span>Java</span>
+                            <span>PHP</span>
+                            <span>MySQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Janvier - Février 2022</div>
+                        <h3>Stage d'initiation</h3>
+                        <h4>Clinisys - Sfax</h4>
+                        <ul>
+                            <li>Expérience pratique au département technique de l'entreprise</li>
+                            <li>Formatage PC et installation système</li>
+                            <li>Dépannage matériel et support technique</li>
+                            <li>Découverte des outils informatiques et logiciels professionnels</li>
+                        </ul>
+                        <div class="tech-stack">
+                            <span>Support IT</span>
+                            <span>Hardware</span>
+                            <span>Windows</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section projects-section">
+        <div class="section-container">
+            <h2 class="section-title"><i class="fas fa-laptop-code"></i> Projets Académiques</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <i class="fas fa-users-cog"></i>
+                        <span class="project-date">Nov - Déc 2023</span>
+                    </div>
+                    <h3>Application Web de Gestion Client</h3>
+                    <p class="project-desc">Module de gestion client intégré dans un système d'agence commerciale avec opérations CRUD complètes.</p>
+                    <ul class="project-features">
+                        <li>Gestion efficace des données clients</li>
+                        <li>Rapports statistiques personnalisables</li>
+                        <li>Tests unitaires avec Mockito</li>
+                    </ul>
+                    <div class="tech-stack">
+                        <span>Spring Boot</span>
+                        <span>Angular</span>
+                        <span>JasperReports</span>
+                        <span>Mockito</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <i class="fas fa-mobile-alt"></i>
+                        <span class="project-date">Oct - Nov 2023</span>
+                    </div>
+                    <h3>Application CV Mobile</h3>
+                    <p class="project-desc">Application mobile présentant un CV personnel de manière interactive et moderne.</p>
+                    <ul class="project-features">
+                        <li>Design moderne et interface intuitive</li>
+                        <li>Export et partage du CV en format PDF</li>
+                        <li>Impression facilitée</li>
+                    </ul>
+                    <div class="tech-stack">
+                        <span>Flutter</span>
+                        <span>Dart</span>
+                        <span>PDF</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <i class="fas fa-palette"></i>
+                        <span class="project-date">Avril - Mai 2023</span>
+                    </div>
+                    <h3>Site Web ArtyProd</h3>
+                    <p class="project-desc">Site vitrine pour agence de design présentant services et créations aux visiteurs en ligne.</p>
+                    <ul class="project-features">
+                        <li>Présentation des services de design</li>
+                        <li>Upload et partage de créations</li>
+                        <li>Environnement collaboratif et interactif</li>
+                    </ul>
+                    <div class="tech-stack">
+                        <span>Django</span>
+                        <span>Python</span>
+                        <span>HTML/CSS</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <i class="fas fa-comments"></i>
+                        <span class="project-date">Nov - Déc 2022</span>
+                    </div>
+                    <h3>Application de Messagerie</h3>
+                    <p class="project-desc">Service de messagerie permettant envoi d'emails et chat en temps réel entre utilisateurs.</p>
+                    <ul class="project-features">
+                        <li>Authentification utilisateur sécurisée</li>
+                        <li>Composition et gestion d'emails</li>
+                        <li>Interface de chat basique en temps réel</li>
+                    </ul>
+                    <div class="tech-stack">
+                        <span>PHP</span>
+                        <span>MySQL</span>
+                        <span>JavaScript</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="section education-section">
+        <div class="section-container">
+            <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Formation & Engagement Associatif</h2>
+            <div class="education-grid">
+                <div class="education-category">
+                    <h3>Formation Académique</h3>
+                    <div class="education-list">
+                        <div class="education-item">
+                            <div class="education-year">2024 - 2025</div>
+                            <div class="education-content">
+                                <h4>Diplôme d'Ingénieur en Génie Logiciel</h4>
+                                <h5>Institut Supérieur des Sciences Appliquées et de Technologie de Sousse (ISSAT Sousse)</h5>
+                                <p>Formation approfondie en génie logiciel, architecture des systèmes et méthodologies de développement avancées.</p>
+                            </div>
+                        </div>
+                        <div class="education-item">
+                            <div class="education-year">2021 - 2024</div>
+                            <div class="education-content">
+                                <h4>Licence en Technologie de l'Information (TI)</h4>
+                                <h5>Institut Supérieur des Études Technologiques de Sfax (ISET Sfax)</h5>
+                                <p>Formation complète en développement web et mobile, bases de données et technologies informatiques modernes.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="education-category">
+                    <h3>Engagement Associatif</h3>
+                    <div class="association-list">
+                        <div class="association-item">
+                            <div class="association-icon">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5rXwjsAIUZq6jvU6pIl1P0AyhfCZe1xpHnA&s" 
+         alt="ARSII Logo"
+         style="width:50px; height:auto;">
+</div>
+
+                            <div class="association-content">
+                                <h4>Secrutaire Génerale </h4>
+                                <h5>ARSII - ISSAT Sousse</h5>
+                                <p class="association-period">Octobre 2025 - Present</p>
+                                <ul>
+                                    <li>Coordination de la communication interne entre les membres du bureau et les différentes équipes.</li>
+                                    <li>Organisation administrative des réunions : comptes rendus, suivi des décisions et gestion des documents officiels.</li>
+                                    <li>Participation à la planification et à la réussite des événements techniques et associatifs.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="association-list">
+                        <div class="association-item">
+                            <div class="association-icon">
+                                <i class="fab fa-microsoft"></i>
+                            </div>
+                            <div class="association-content">
+                                <h4>Responsable Relations Externes</h4>
+                                <h5>Microsoft Technology Club - ISET Sfax</h5>
+                                <p class="association-period">Avril 2023 - Avril 2024</p>
+                                <ul>
+                                    <li>Représentation du club dans les partenariats et collaborations</li>
+                                    <li>Communication externe avec organisations et sponsors</li>
+                                    <li>Coordination avec intervenants pour événements techniques</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+        <div class="section-container">
+            <h2 class="section-title"><i class="fas fa-envelope"></i> Contact</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Restons en contact</h3>
+                    <p>Vous avez un projet intéressant, une opportunité de stage ou vous souhaitez simplement discuter ? N'hésitez pas à me contacter.</p>
+                    <ul class="contact-list">
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <strong>Email</strong>
+                                <a href="mailto:maissaellouze02@gmail.com">maissaellouze02@gmail.com</a>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <strong>Téléphone</strong>
+                                <a href="tel:+21629093786">+216 29 093 786</a>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong>Localisation</strong>
+                                <span>Sfax, Tunisie</span>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="contact-socials">
+                        <a href="https://linkedin.com/in/maissa-ellouze" target="_blank" class="social-btn">
+                            <i class="fab fa-linkedin"></i> LinkedIn
+                        </a>
+                        <a href="https://github.com/maissaellouze" target="_blank" class="social-btn">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+
+                    <div class="interests-section">
+                        <h4><i class="fas fa-heart"></i> Centres d'Intérêt</h4>
+                        <div class="interests-list">
+                            <span class="interest-tag"><i class="fas fa-dumbbell"></i> Sport</span>
+                            <span class="interest-tag"><i class="fas fa-users"></i> Vie Associative</span>
+                            <span class="interest-tag"><i class="fas fa-code"></i> Open Source</span>
+                            <span class="interest-tag"><i class="fas fa-book"></i> Veille Technologique</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper">
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Nom complet</label>
+                            <input type="text" id="name" name="name" placeholder="Votre nom" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="votre.email@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Votre message..." required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-paper-plane"></i> Envoyer le message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer no-print">
+        <p>&copy; 2024 Maissa ELLOUZE. Tous droits réservés.</p>
+        <button class="print-button" onclick="window.print()">
+            <i class="fas fa-print"></i> Imprimer le CV
+        </button>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
