@@ -3,10 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="CV ">
+    <meta name="description" content="CV interactif en ligne - Portfolio professionnel de Maissa ELLOUZE">
     <title>CV  - Maissa ELLOUZE</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script src="script.js"></script>
+
+    
 </head>
 <body>
     <nav class="navigation no-print">
@@ -20,6 +24,14 @@
             <li><a href="#education" class="nav-link" data-section="education"><i class="fas fa-graduation-cap"></i><span>Formation</span></a></li>
             <li><a href="#contact" class="nav-link" data-section="contact"><i class="fas fa-envelope"></i><span>Contact</span></a></li>
         </ul>
+        <div class="nav-actions no-print">
+            <button class="dark-mode-toggle" aria-label="Basculer le mode sombre" title="Mode sombre">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button class="pdf-download-btn" onclick="downloadPDF()" aria-label="Télécharger PDF" title="Télécharger CV en PDF">
+                <i class="fas fa-file-pdf"></i>
+            </button>
+        </div>
         <button class="nav-toggle" aria-label="Toggle navigation">
             <span></span>
             <span></span>
@@ -228,7 +240,7 @@
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <div class="timeline-date">Juillet - Août 2025</div>
-                        <h3>Stage d'initiation</h3>
+                        <h3>Stage Introductif</h3>
                         <h4>Intellitech - Sfax</h4>
                         <p class="project-subtitle">Système de Suivi des Échantillons de Tests Médicaux à Domicile</p>
                         <ul>
@@ -294,7 +306,7 @@
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <div class="timeline-date">Janvier - Février 2023</div>
-                        <h3>Stage de perfectionnement</h3>
+                        <h3>Stage d'Amélioration</h3>
                         <h4>Artibedded - Sfax</h4>
                         <p class="project-subtitle">Système de Gestion de Jardin d'Enfants</p>
                         <ul>
@@ -315,7 +327,7 @@
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <div class="timeline-date">Janvier - Février 2022</div>
-                        <h3>Stage d'initiation</h3>
+                        <h3>Stage Introductif</h3>
                         <h4>Clinisys - Sfax</h4>
                         <ul>
                             <li>Expérience pratique au département technique de l'entreprise</li>

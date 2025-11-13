@@ -5,6 +5,9 @@ document.addEventListener('DOMContentLoaded', function() {
     animateCounters();
     setupScrollAnimations();
     handleFormSubmission();
+    initDarkMode();
+    setupExperienceToggle();
+    setupSkillFilters();
 });
 
 function initNavigation() {
@@ -241,3 +244,133 @@ if (heroScrollIndicator) {
         }
     });
 }
+
+function initDarkMode() {
+    const darkModeToggle = document.querySelector('.dark-mode-toggle');
+    const htmlElement = document.documentElement;
+
+    const savedMode = localStorage.getItem('darkMode') || 'light';
+    htmlElement.setAttribute('data-theme', savedMode);
+
+    if (darkModeToggle) {
+        if (savedMode === 'dark') {
+            darkModeToggle.classList.add('active');
+        }
+
+        darkModeToggle.addEventListener('click', () => {
+            const currentMode = htmlElement.getAttribute('data-theme');
+            const newMode = currentMode === 'light' ? 'dark' : 'light';
+
+            htmlElement.setAttribute('data-theme', newMode);
+            localStorage.setItem('darkMode', newMode);
+            darkModeToggle.classList.toggle('active');
+        });
+    }
+}
+
+function setupExperienceToggle() {
+    const timelineItems = document.querySelectorAll('.timeline-item');
+
+    timelineItems.forEach(item => {
+        const content = item.querySelector('.timeline-content');
+        const toggleBtn = document.createElement('button');
+        toggleBtn.className = 'expand-btn';
+        toggleBtn.innerHTML = '<i class="fas fa-chevron-down"></i>';
+        toggleBtn.setAttribute('aria-label', 'Voir plus de détails');
+
+        const details = content.querySelector('ul');
+        if (details) {
+            toggleBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                content.classList.toggle('expanded');
+                toggleBtn.classList.toggle('active');
+            });
+            content.appendChild(toggleBtn);
+        }
+    });
+}
+
+function setupSkillFilters() {
+    const skillsSection = document.querySelector('.skills-section');
+    if (!skillsSection) return;
+
+    const filterContainer = document.createElement('div');
+    filterContainer.className = 'skill-filters';
+    filterContainer.innerHTML = `
+        <button class="filter-btn active" data-filter="all">Tous</button>
+        <button class="filter-btn" data-filter="languages">Langages</button>
+        <button class="filter-btn" data-filter="frameworks">Frameworks</button>
+        <button class="filter-btn" data-filter="databases">Bases de données</button>
+        <button class="filter-btn" data-filter="tools">Outils</button>
+    `;
+
+    const sectionContainer = skillsSection.querySelector('.section-container');
+    sectionContainer.insertBefore(filterContainer, sectionContainer.querySelector('.skills-grid'));
+
+    const skillCards = document.querySelectorAll('.skill-card');
+    const filterBtns = document.querySelectorAll('.filter-btn');
+
+    const cardMap = {
+        'languages': 0,
+        'frameworks': 1,
+        'databases': 2,
+        'tools': 3,
+        'languages-list': 4,
+        'soft-skills': 5
+    };
+
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            filterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const filter = btn.getAttribute('data-filter');
+
+            skillCards.forEach((card, index) => {
+                if (filter === 'all') {
+                    card.style.display = 'block';
+                    setTimeout(() => {
+                        card.style.opacity = '1';
+                        card.style.transform = 'translateY(0)';
+                    }, 10);
+                } else {
+                    const categoryIndex = Object.values(cardMap).indexOf(index);
+                    const category = Object.keys(cardMap)[categoryIndex];
+
+                    if (category === filter || (filter === 'languages-list' && index === 4) || (filter === 'soft-skills' && index === 5)) {
+                        card.style.display = 'block';
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                            card.style.transform = 'translateY(0)';
+                        }, 10);
+                    } else {
+                        card.style.opacity = '0';
+                        card.style.transform = 'translateY(20px)';
+                        setTimeout(() => {
+                            card.style.display = 'none';
+                        }, 300);
+                    }
+                }
+            });
+        });
+    });
+}
+
+function downloadPDF() {
+    const element = document.body;
+
+    const opt = {
+        margin: 10,
+        filename: 'Maissa_ELLOUZE_CV.pdf',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2 },
+        jsPDF: { orientation: 'portrait', unit: 'mm', format: 'a4' }
+    };
+
+    if (window.html2pdf) {
+        html2pdf().set(opt).from(element).save();
+    } else {
+        alert("La bibliothèque html2pdf.js n'est pas chargée !");
+    }
+}
+

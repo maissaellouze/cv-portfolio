@@ -20,6 +20,20 @@
     --shadow-hover: 0 8px 30px rgba(0, 0, 0, 0.15);
 }
 
+html[data-theme="dark"] {
+    --primary-color: #61e0d4;
+    --secondary-color: #4fc8ba;
+    --accent-color: #4fc8ba;
+    --highlight-color: #256360;
+    --text-color: #e0e0e0;
+    --light-text: #b0b0b0;
+    --white: #1a1a1a;
+    --light-bg: #2d2d2d;
+    --gray: #a0a0a0;
+    --light-gray: #3d3d3d;
+    --border-color: #444;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -124,6 +138,40 @@ body {
 
 .nav-link i {
     font-size: 18px;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.dark-mode-toggle,
+.pdf-download-btn {
+    background: none;
+    border: 2px solid var(--highlight-color);
+    color: var(--highlight-color);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+.dark-mode-toggle:hover,
+.pdf-download-btn:hover {
+    background: var(--highlight-color);
+    color: var(--white);
+    transform: scale(1.1);
+}
+
+.dark-mode-toggle.active {
+    background: var(--highlight-color);
+    color: var(--white);
 }
 
 .nav-toggle {
@@ -382,6 +430,38 @@ body {
     background-color: var(--light-bg);
 }
 
+.skill-filters {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 12px 25px;
+    background: var(--white);
+    border: 2px solid var(--highlight-color);
+    color: var(--highlight-color);
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+    background: var(--highlight-color);
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
+.filter-btn.active {
+    background: linear-gradient(135deg, var(--highlight-color), var(--accent-color));
+    color: var(--white);
+    box-shadow: 0 5px 15px rgba(97, 224, 212, 0.4);
+}
+
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -549,11 +629,44 @@ body {
     border-radius: 15px;
     box-shadow: var(--shadow);
     transition: all 0.3s ease;
+    position: relative;
+    max-height: 250px;
+    overflow: hidden;
+}
+
+.timeline-content.expanded {
+    max-height: none;
 }
 
 .timeline-content:hover {
     transform: translateX(10px);
     box-shadow: var(--shadow-hover);
+}
+
+.expand-btn {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    background: linear-gradient(135deg, var(--highlight-color), var(--accent-color));
+    color: var(--white);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.expand-btn:hover {
+    transform: scale(1.1);
+}
+
+.expand-btn.active i {
+    transform: rotate(180deg);
 }
 
 .timeline-date {
